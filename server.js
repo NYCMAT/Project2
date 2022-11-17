@@ -72,7 +72,7 @@ app.get('/game/seed', (req, res) => {
  
 
 // index route
-app.get('/game', (req, res) => {
+app.get('/', (req, res) => {
     game.find({}, (error, allGame) => {
         res.render(
             'index.ejs',
