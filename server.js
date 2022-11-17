@@ -100,7 +100,7 @@ app.listen(port, () => {
     console.log(`Video Game app listening on port: ${port}`)
   });
   
-  mongoose.connect('mongodb+srv://NYC_Mat:student@sei.kev6jdn.mongodb.net/?retryWrites=true&w=majority', () => {
+  mongoose.connect('mongodb+srv://NYC_Mat:<student>@sei.kev6jdn.mongodb.net/?retryWrites=true&w=majority', () => {
       console.log('The connection with mongod is established')
   })
 
