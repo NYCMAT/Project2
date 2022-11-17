@@ -15,10 +15,10 @@ app.use(express.static('public'))
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
-// let PORT = 3000;
-// if(process.env.PORT){
-// 	PORT = process.env.PORT
-// }
+let PORT = 3000;
+if(process.env.PORT){
+	PORT = process.env.PORT
+}
 
 // =======================================
 //              DATABASE
@@ -100,7 +100,7 @@ app.get('/game', (req, res) => {
 // })
 
 
-//Class express example(working when comment out all code on top)
+// Class express example(working when comment out all code on top)
 // const mongoose = require('mongoose');
 // const express = require('express');
 // const app = express();
@@ -123,7 +123,7 @@ app.get('/game', (req, res) => {
 // =======================================
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log(`App listening on port: 3000`)
   });
 
