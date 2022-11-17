@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/normalize.css">       
+         <title></title>
+    </head>
+    <body>
+        <h1>Add New game</h1>
+        <form action="/game" method="POST">
+            Title: <input type="text" name="title" ><br/>
+            Developer: <input type="text" name="developer" ><br/>
+            System: <input type="text" name="system" ><br/>
+            Release Date: <input type="text" name="release"><br/>
+            <input type="submit"  value="Submit Changes"/>
+        </form>
+        <nav>
+            <a class="btn btn-primary" href="/game">Back to mainpage</a>
+        </nav>
+    </body>
+</html>

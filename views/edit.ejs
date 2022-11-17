@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/normalize.css">        
+        <title></title>
+    </head>
+    <body>
+        <h1>Edit Game</h1>
+        <form action="/game/<%=game.id%>?_method=PUT" method="POST">
+
+            <!--  NOTE: the form is pre-populated with values for the server-->
+            Title: <input type="text" name="title" value="<%=game.title%>"/><br/>
+            Developer: <input type="text" name="developer" value="<%=game.developer%>"/><br/>
+            System: <input type="text" name="system" value="<%=game.system%>"/><br/>
+            Release Date: <input type="text" name="release" value="<%=game.release%>"/><br/>
+            <input type="submit" name="" value="Submit Changes"/>
+        </form>
+        <nav>
+            <a class="button" href="/game">Back to mainpage</a>
+        </nav>
+    </body>
+</html>
