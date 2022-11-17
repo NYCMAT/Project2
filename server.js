@@ -6,7 +6,10 @@ const mongoose = require('mongoose');
 const game = require('./models/gameSchema.js');
 const methodOverride = require('method-override');
 const app = express();
-const port = 3000;
+let PORT = 3000;
+if(process.env.PORT){
+	PORT = process.env.PORT
+}
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'))
 const mongoURI = 'mongodb://localhost:27017/game';
