@@ -116,7 +116,7 @@ app.listen(PORT, ()=>{
 // =======================================
 
 app.listen(port, () => {
-    console.log(`App listening on port: ${port}`)
+    console.log(`App listening on port: ${PORT}`)
   });
 
 mongoose.connect('mongodb+srv://NYC_Mat:student@sei.kev6jdn.mongodb.net/?retryWrites=true&w=majority', ()=>{
