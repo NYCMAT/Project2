@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const app = express();
 const game = require('./models/gameSchema.js');
 const methodOverride = require('method-override');
+const Game = require('./models/gameSeed.js');
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'))
 // const mongoURI = 'mongodb+srv://NYC_Mat:student@sei.kev6jdn.mongodb.net/?retryWrites=true&w=majority';
@@ -19,7 +20,7 @@ if(process.env.PORT){
 // =======================================
 //              DATABASE
 // =======================================
-const Game = require('./models/gameSeed.js');
+
 // const { db } = require('./models/gameSchema.js');
 // ===========================
 //           ROUTES
@@ -65,7 +66,7 @@ app.delete('/game/:id', (req, res)=>{
 //seed route
 app.get('/game/seed', (req, res) => {
     game.create(Game, (error, GameArray) => {
-      res.send(GameArray)
+      res.redirect("/game")
     })
   })
 
