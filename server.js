@@ -13,10 +13,10 @@ app.use(methodOverride('_method'))
 // const mongoURI = 'mongodb+srv://NYC_Mat:student@sei.kev6jdn.mongodb.net/?retryWrites=true&w=majority';
 app.use(express.static('public'))
 
-let PORT = 3000;
-if(process.env.PORT){
-	PORT = process.env.PORT
-}
+// let PORT = 3000;
+// if(process.env.PORT){
+// 	PORT = process.env.PORT
+// }
 
 // =======================================
 //              DATABASE
@@ -128,7 +128,7 @@ app.listen(PORT, () => {
 //       console.log('The connection with mongod is established')
 //   })  
 
-mongoose.connect('mongodb+srv://NYC_Mat:student@sei.kev6jdn.mongodb.net/?retryWrites=true&w=majority', ()=>{
+mongoose.connect(MONGODB_URI, ()=>{
 	console.log('connected to mongo');
 })
 
