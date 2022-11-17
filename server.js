@@ -8,7 +8,7 @@ const game = require('./models/gameSchema.js');
 const methodOverride = require('method-override');
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'))
-const mongoURI = 'mongodb://localhost:27017/game';
+const mongoURI = 'mongodb+srv://NYC_Mat:student@sei.kev6jdn.mongodb.net/?retryWrites=true&w=majority';
 app.use(express.static('public'))
 
 let PORT = 3000;
