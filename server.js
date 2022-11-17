@@ -13,7 +13,6 @@ app.use(methodOverride('_method'))
 // const mongoURI = 'mongodb+srv://NYC_Mat:student@sei.kev6jdn.mongodb.net/?retryWrites=true&w=majority';
 app.use(express.static('public'))
 
-const PORT = process.env.PORT
 const MONGODB_URI = process.env.MONGODB_URI;
 
 // let PORT = 3000;
@@ -124,8 +123,8 @@ app.get('/game', (req, res) => {
 // =======================================
 
 
-app.listen(PORT, () => {
-    console.log(`App listening on port: ${PORT}`)
+app.listen(3000, () => {
+    console.log(`App listening on port: 3000`)
   });
 
 //   mongoose.connect('mongodb://localhost:27017/game', () => {
