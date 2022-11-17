@@ -13,6 +13,9 @@ app.use(methodOverride('_method'))
 // const mongoURI = 'mongodb+srv://NYC_Mat:student@sei.kev6jdn.mongodb.net/?retryWrites=true&w=majority';
 app.use(express.static('public'))
 
+const PORT = process.env.PORT
+const MONGODB_URI = process.env.MONGODB_URI;
+
 // let PORT = 3000;
 // if(process.env.PORT){
 // 	PORT = process.env.PORT
@@ -119,6 +122,7 @@ app.get('/game', (req, res) => {
 // =======================================
 //              LISTENER
 // =======================================
+
 
 app.listen(PORT, () => {
     console.log(`App listening on port: ${PORT}`)
