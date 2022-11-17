@@ -72,7 +72,7 @@ app.get('/game/seed', (req, res) => {
  
 
 // index route
-app.get('/', (req, res) => {
+app.get('/game', (req, res) => {
     game.find({}, (error, allGame) => {
         res.render(
             'index.ejs',
@@ -84,7 +84,7 @@ app.get('/', (req, res) => {
 })
 
 //show route
-app.get('/:id', (req, res) => {
+app.get('/game/:id', (req, res) => {
     game.findById(req.params.id, (error, foundgame) => {
         res.render(
             'show.ejs',
@@ -115,9 +115,9 @@ app.get('/:id', (req, res) => {
 //              LISTENER
 // =======================================
 
-// app.listen(port, () => {
-//     console.log(`App listening on port: ${PORT}`)
-//   });
+app.listen(PORT, () => {
+    console.log(`App listening on port: ${PORT}`)
+  });
 
 mongoose.connect('mongodb+srv://NYC_Mat:student@sei.kev6jdn.mongodb.net/?retryWrites=true&w=majority', ()=>{
 	console.log('connected to mongo');
