@@ -8,6 +8,7 @@ const game = require('./models/gameSchema.js');
 const methodOverride = require('method-override');
 const Game = require('./models/gameSeed.js');
 app.use(express.urlencoded({extended:true}));
+const db = mongoose.connection;
 app.use(methodOverride('_method'))
 // const mongoURI = 'mongodb+srv://NYC_Mat:student@sei.kev6jdn.mongodb.net/?retryWrites=true&w=majority';
 app.use(express.static('public'))
@@ -126,4 +127,9 @@ app.listen(PORT, () => {
 mongoose.connect('mongodb+srv://NYC_Mat:student@sei.kev6jdn.mongodb.net/?retryWrites=true&w=majority', ()=>{
 	console.log('connected to mongo');
 })
+
+// Error / success
+db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
+db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
+db.on('disconnected', () => console.log('mongo disconnected'));
 
