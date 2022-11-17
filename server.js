@@ -124,12 +124,16 @@ app.listen(PORT, () => {
     console.log(`App listening on port: ${PORT}`)
   });
 
+//   mongoose.connect('mongodb://localhost:27017/game', () => {
+//       console.log('The connection with mongod is established')
+//   })  
+
 mongoose.connect('mongodb+srv://NYC_Mat:student@sei.kev6jdn.mongodb.net/?retryWrites=true&w=majority', ()=>{
 	console.log('connected to mongo');
 })
 
-// Error / success
-db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
-db.on('connected', () => console.log('mongo connected: ', "mongodb+srv://NYC_Mat:student@sei.kev6jdn.mongodb.net/?retryWrites=true&w=majority"));
-db.on('disconnected', () => console.log('mongo disconnected'));
+// // Error / success
+// db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
+// db.on('connected', () => console.log('mongo connected: ', "mongodb+srv://NYC_Mat:student@sei.kev6jdn.mongodb.net/?retryWrites=true&w=majority"));
+// db.on('disconnected', () => console.log('mongo disconnected'));
 
