@@ -29,49 +29,49 @@ if(process.env.PORT){
 //           ROUTES
 // ===========================
 //new item route
-// app.get('/game/new', (req, res) => {
-//     res.render('new.ejs')
-// });
+app.get('/game/new', (req, res) => {
+    res.render('new.ejs')
+});
 
-// app.post('/game', (req, res) => {
-//     game.create(req.body, (error, createdgame) => {
-//         res.redirect('/game')
-//     })
-//   });
+app.post('/game', (req, res) => {
+    game.create(req.body, (error, createdgame) => {
+        res.redirect('/game')
+    })
+  });
 
-// //update(replace whole data)
-// app.put('/game/:id', (req, res)=>{
-//     game.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel)=>{
-//         res.redirect('/game');
-//     });
-// });
-// //edit
-// app.get('/game/:id/edit', (req, res)=>{
-//     game.findById(req.params.id, (err, foundgame)=>{ //find the game
-//         res.render(
-//     		'edit.ejs',
-//     		{
-//     			game: foundgame //pass in found game
-//     		}
-//     	);
-//     });
-// });  
+//update(replace whole data)
+app.put('/game/:id', (req, res)=>{
+    game.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel)=>{
+        res.redirect('/game');
+    });
+});
+//edit
+app.get('/game/:id/edit', (req, res)=>{
+    game.findById(req.params.id, (err, foundgame)=>{ //find the game
+        res.render(
+    		'edit.ejs',
+    		{
+    			game: foundgame //pass in found game
+    		}
+    	);
+    });
+});  
 
-// //delete
-// app.delete('/game/:id', (req, res)=>{
-//     game.findByIdAndRemove(req.params.id, (error,data) => {
-//         res.redirect('/game');
-//     });
-// });
+//delete
+app.delete('/game/:id', (req, res)=>{
+    game.findByIdAndRemove(req.params.id, (error,data) => {
+        res.redirect('/game');
+    });
+});
 
 // // game.collection.drop()
 
-// //seed route
-// app.get('/game/seed', (req, res) => {
-//     game.create(Game, (error, GameArray) => {
-//       res.redirect("/game")
-//     })
-//   })
+//seed route
+app.get('/game/seed', (req, res) => {
+    game.create(Game, (error, GameArray) => {
+      res.redirect("/game")
+    })
+  })
 
  
 
@@ -87,20 +87,20 @@ app.get('/game', (req, res) => {
     })
 })
 
-// //show route
-// app.get('/game/:id', (req, res) => {
-//     game.findById(req.params.id, (error, foundgame) => {
-//         res.render(
-//             'show.ejs',
-//             {
-//                 game: foundgame
-//             }
-//         )
-//     })
-// })
+//show route
+app.get('/game/:id', (req, res) => {
+    game.findById(req.params.id, (error, foundgame) => {
+        res.render(
+            'show.ejs',
+            {
+                game: foundgame
+            }
+        )
+    })
+})
 
 
-// Class express example(working when comment out all code on top)
+//// Class express example(working when comment out all code on top)
 // const mongoose = require('mongoose');
 // const express = require('express');
 // const app = express();
@@ -135,8 +135,4 @@ mongoose.connect(MONGODB_URI, ()=>{
 	console.log('connected to mongo');
 })
 
-// // Error / success
-// db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
-// db.on('connected', () => console.log('mongo connected: ', "mongodb+srv://NYC_Mat:student@sei.kev6jdn.mongodb.net/?retryWrites=true&w=majority"));
-// db.on('disconnected', () => console.log('mongo disconnected'));
 
