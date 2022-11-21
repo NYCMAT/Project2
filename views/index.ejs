@@ -14,7 +14,7 @@
             <% for(let i=0; i < game.length; i++){ %>
                 <li class="nav-item">
                     <a href="/game/<%=game[i]._id; %>">
-                        <%=game[i].name; %>
+                        <%=game[i].title; %>
                     </a>
                     <a href="/game/<%=game[i]._id; %>/edit">Edit</a>
                     <form action="/game/<%=game[i]._id; %>?_method=DELETE" method="POST">
