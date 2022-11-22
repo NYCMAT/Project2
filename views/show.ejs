@@ -9,13 +9,20 @@
 </head>
 <body>
     <header>
-       <h1>Game Collection</h1>
+       <h1>TCG Collection</h1>
     </header>
-    <h2>Game Info</h2>
-    <p><span>Title: </span> <%=game.title%></p><br/>
-    <p><span>Developer: </span> <%=game.developer%></p><br/>
-    <p><span>System: </span><%=game.system%></p><br/>
-    <p><span>Release Date: </span> <%=game.release%></p><br/>
+    <h2>Card Info</h2>
+    <p><span>Title: </span> <%=game.cardgame%></p><br/>
+    <p><span>Developer: </span> <%=game.name%></p><br/>
+    <p><span>System: </span><%=game.set%></p><br/>
+    <p><span>Release Date: </span> <%=game.rarity%></p><br/>
+    <img src=<%=game.img%> alt=""><br/>
+
+    <a href="/game/<%=game._id; %>/edit">Edit</a>
+
+    <form action="/game/<%=game._id; %>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE" href="/game" />
+    </form>
     <nav>
         <a class="button" href="/game">Back to mainpage</a>
     </nav>

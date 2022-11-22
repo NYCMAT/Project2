@@ -2,10 +2,11 @@ const mongoose = require('mongoose');
 
 const gameSchema = new mongoose.Schema({
     
-    title: {type: String, required: true},
-    developer: {type: String, required: true},
-    system: {type: String, required: true},
-    release: {type: String, required: true}
+    cardgame: {type: String, required: true},
+    name: {type: String, required: true},
+    set: {type: String, required: true},
+    rarity: {type: String, required: true},
+    img: String
   });
   
   const game = mongoose.model('game', gameSchema);

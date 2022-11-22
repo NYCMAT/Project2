@@ -10,10 +10,11 @@
         <form action="/game/<%=game.id%>?_method=PUT" method="POST">
 
             <!--  NOTE: the form is pre-populated with values for the server-->
-            Title: <input type="text" name="title" value="<%=game.title%>"/><br/>
-            Developer: <input type="text" name="developer" value="<%=game.developer%>"/><br/>
-            System: <input type="text" name="system" value="<%=game.system%>"/><br/>
-            Release Date: <input type="text" name="release" value="<%=game.release%>"/><br/>
+            Game: <input type="text" name="cardgame" value="<%=game.cardgame%>"/><br/>
+            Card: <input type="text" name="name" value="<%=game.name%>"/><br/>
+            Set: <input type="text" name="set" value="<%=game.set%>"/><br/>
+            Rarity: <input type="text" name="rarity" value="<%=game.rarity%>"/><br/>
+            Image URL: <input type="text" name="img" value="<%=game.img%>"/><br/>
             <input type="submit" name="" value="Submit Changes"/>
         </form>
         <nav>

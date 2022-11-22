@@ -64,7 +64,7 @@ app.delete('/game/:id', (req, res)=>{
     });
 });
 
-// // game.collection.drop()
+// game.collection.drop()
 
 //seed route
 app.get('/game/seed', (req, res) => {

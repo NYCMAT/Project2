@@ -1,62 +1,100 @@
 module.exports = [
     {
-      title: "Super Smash Bro. Melee",
-      developer: "Nintendo",
-      system: "Gamecube",
-      release: "12/2/2001"
+      cardgame: "Pokemon",
+      name: "Charmander",
+      set: "Base",
+      rarity: "Common",
+      img: "https://product-images.tcgplayer.com/fit-in/437x437/107043.jpg",
     },
     {
-        title: "Metroid Prime",
-        developer: "Nintendo",
-        system: "Gamecube",
-        release: "11/2/2001"
-      },
-      {
-        title: "The Legend of Zelda: The Wind Walker",
-        developer: "Nintendo",
-        system: "Gamecube",
-        release: "3/24/2003"
-      },
-      {
-        title: "Grand Theft Auto Sanadreas",
-        developer: "Rockstar Games",
-        system: "Playstion 2",
-        release: "10/26/2004"
-      },
-      {
-        title: "Kingdom Hearts",
-        developer: "Square Enix",
-        system: "Playstation",
-        release: "3/28/2002"
-      },
-      {
-        title: "God of War II",
-        developer: "Sony Computer Entertainment",
-        system: "Playstation",
-        release: "3/17/2007"
-      },
-      {
-        title: "Metal Gear Solid 3: Snake Eater",
-        developer: "Konami",
-        system: "Playstation",
-        release: "11/17/2004"
-      },
-      {
-        title: "Halo: Combat Evolved",
-        developer: "Bungie",
-        system: "Xbox",
-        release: "11/15/2001"
-      },
-      {
-        title: "Fable",
-        developer: "Lionhead Studios",
-        system: "Xbox",
-        release: "9/14/2004"
-      },
-      {
-        title: "Project Gotham Racing 2",
-        developer: "Bizarre Creations",
-        system: "Xbox",
-        release: "11/18/2003"
-      },
+      cardgame: "Pokemon",
+      name: "Bulbasaur",
+      set: "Base",
+      rarity: "Common",
+      img: "https://product-images.tcgplayer.com/fit-in/874x874/107041.jpg",
+    },
+    {
+      cardgame: "Pokemon",
+      name: "Squirtle",
+      set: "Base",
+      rarity: "Common",
+      img: "https://product-images.tcgplayer.com/fit-in/437x437/107060.jpg",
+    },
+    {
+      cardgame: "Pokemon",
+      name: "Eevee",
+      set: "Jungle",
+      rarity: "Common",
+      img: "https://product-images.tcgplayer.com/fit-in/437x437/45154.jpg",
+    },
+    {
+      cardgame: "Pokemon",
+      name: "Pikachu",
+      set: "Base",
+      rarity: "Common",
+      img: "https://product-images.tcgplayer.com/fit-in/437x437/107055.jpg",
+    },
+    {
+      cardgame: "Magic",
+      name: "Timetwister",
+      set: "Alpha",
+      rarity: "Rare",
+      img: "https://product-images.tcgplayer.com/fit-in/437x437/1285.jpg",
+    },
+    {
+      cardgame: "Magic",
+      name: "The Hive",
+      set: "Alpha",
+      rarity: "Rare",
+      img: "https://product-images.tcgplayer.com/fit-in/437x437/1278.jpg",
+    },
+    {
+      cardgame: "Magic",
+      name: "The Wandering Emperor",
+      set: "Kamigawa: Neon Dynasty",
+      rarity: "Mythic",
+      img: "https://product-images.tcgplayer.com/fit-in/437x437/263247.jpg",
+    },
+    {
+      cardgame: "Magic",
+      name: "Godless Shine",
+      set: "Unfinity",
+      rarity: "Land",
+      img: "https://product-images.tcgplayer.com/fit-in/437x437/287158.jpg",
+    },
+    {
+      cardgame: "Magic",
+      name: "Comet, Stellar Pup",
+      set: "Unfinity",
+      rarity: "Mythic",
+      img: "https://product-images.tcgplayer.com/fit-in/437x437/287142.jpg",
+    },
+    {
+      cardgame: "YuGiOh",
+      name: "Blue Eyes White Dragon",
+      set: "The Legend of Blue Eyes White Dragon",
+      rarity: "Ultra Rare",
+      img: "https://product-images.tcgplayer.com/fit-in/437x437/21792.jpg",
+    },
+    {
+      cardgame: "YuGiOh",
+      name: "Dark Magician",
+      set: "The Legend of Blue Eyes White Dragon",
+      rarity: "Ultra Rare",
+      img: "https://product-images.tcgplayer.com/fit-in/437x437/21876.jpg",
+    },
+    {
+      cardgame: "YuGiOh",
+      name: "Tri Horned Dragon",
+      set: "The Legend of Blue Eyes White Dragon",
+      rarity: "Secret Rare",
+      img: "https://product-images.tcgplayer.com/fit-in/437x437/22538.jpg",
+    },
+    {
+      cardgame: "YuGiOh",
+      name: "Bystial Druiswurm",
+      set: "Darkwing Blast",
+      rarity: "Super Rare",
+      img: "https://product-images.tcgplayer.com/fit-in/437x437/450160.jpg",
+    },
   ]
