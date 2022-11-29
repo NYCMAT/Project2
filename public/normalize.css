@@ -3,9 +3,13 @@
 body {
     /* background-color: #010402; */
     background-image: url("https://wallpaperaccess.com/full/4167709.gif");
-    background-size: cover;
+    background-size: stretch;
     color: white;
     margin-top: 10%;
+}
+
+body::after {
+
 }
 
 a {

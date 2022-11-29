@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/normalize.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">YuGiOh Collection</h1>
+        <ul>
+            <h2>YuGiOh Collection</h2>
+                <% for(let i=0; i < game.length; i++){ %>
+                
+                        <% if (game[i].cardgame == "YuGiOh" || game[i].cardgame == "yugioh" || game[i].cardgame == "Yugioh"){%>
+                        <a href="/game/<%=game[i]._id; %>">
+                            <%=game[i].name; %><br/>
+                        </a>
+                        <% } %>
+
+                    <% } %>
+        </ul>
+        
+        <nav>
+            <a class="btn btn-primary" href="/game/new">       
+                <div class="button">
+                    Add a new card to the collection
+                  </div></a>
+                  <a class="button" href="/game">Back to mainpage</a>
+        </nav>
+    </div>
+</body>
+</html>
