@@ -4,6 +4,7 @@ module.exports = [
       name: "Charmander",
       set: "Base",
       rarity: "Common",
+      value: "90",
       img: "https://product-images.tcgplayer.com/fit-in/437x437/107043.jpg",
     },
     {
@@ -11,6 +12,7 @@ module.exports = [
       name: "Bulbasaur",
       set: "Base",
       rarity: "Common",
+      value: "155",
       img: "https://product-images.tcgplayer.com/fit-in/874x874/107041.jpg",
     },
     {
@@ -18,6 +20,7 @@ module.exports = [
       name: "Squirtle",
       set: "Base",
       rarity: "Common",
+      value: "80",
       img: "https://product-images.tcgplayer.com/fit-in/437x437/107060.jpg",
     },
     {
@@ -25,6 +28,7 @@ module.exports = [
       name: "Eevee",
       set: "Jungle",
       rarity: "Common",
+      value: "6",
       img: "https://product-images.tcgplayer.com/fit-in/437x437/45154.jpg",
     },
     {
@@ -32,6 +36,7 @@ module.exports = [
       name: "Pikachu",
       set: "Base",
       rarity: "Common",
+      value: "200",
       img: "https://product-images.tcgplayer.com/fit-in/437x437/107055.jpg",
     },
     {
@@ -39,6 +44,7 @@ module.exports = [
       name: "Timetwister",
       set: "Alpha",
       rarity: "Rare",
+      value: "10000",
       img: "https://product-images.tcgplayer.com/fit-in/437x437/1285.jpg",
     },
     {
@@ -46,6 +52,7 @@ module.exports = [
       name: "The Hive",
       set: "Alpha",
       rarity: "Rare",
+      value: "935",
       img: "https://product-images.tcgplayer.com/fit-in/437x437/1278.jpg",
     },
     {
@@ -53,13 +60,15 @@ module.exports = [
       name: "The Wandering Emperor",
       set: "Kamigawa: Neon Dynasty",
       rarity: "Mythic",
+      value: "166",
       img: "https://product-images.tcgplayer.com/fit-in/437x437/263247.jpg",
     },
     {
       cardgame: "Magic",
-      name: "Godless Shine",
+      name: "Godless Shrine",
       set: "Unfinity",
       rarity: "Land",
+      value: "125",
       img: "https://product-images.tcgplayer.com/fit-in/437x437/287158.jpg",
     },
     {
@@ -67,6 +76,7 @@ module.exports = [
       name: "Comet, Stellar Pup",
       set: "Unfinity",
       rarity: "Mythic",
+      value: "10",
       img: "https://product-images.tcgplayer.com/fit-in/437x437/287142.jpg",
     },
     {
@@ -74,6 +84,7 @@ module.exports = [
       name: "Blue Eyes White Dragon",
       set: "The Legend of Blue Eyes White Dragon",
       rarity: "Ultra Rare",
+      value: "400",
       img: "https://product-images.tcgplayer.com/fit-in/437x437/21792.jpg",
     },
     {
@@ -81,6 +92,7 @@ module.exports = [
       name: "Dark Magician",
       set: "The Legend of Blue Eyes White Dragon",
       rarity: "Ultra Rare",
+      value: "500",
       img: "https://product-images.tcgplayer.com/fit-in/437x437/21876.jpg",
     },
     {
@@ -88,6 +100,7 @@ module.exports = [
       name: "Tri Horned Dragon",
       set: "The Legend of Blue Eyes White Dragon",
       rarity: "Secret Rare",
+      value: "150",
       img: "https://product-images.tcgplayer.com/fit-in/437x437/22538.jpg",
     },
     {
@@ -95,6 +108,7 @@ module.exports = [
       name: "Bystial Druiswurm",
       set: "Darkwing Blast",
       rarity: "Super Rare",
+      value: "8",
       img: "https://product-images.tcgplayer.com/fit-in/437x437/450160.jpg",
     },
   ]

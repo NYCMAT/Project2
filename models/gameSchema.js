@@ -5,7 +5,8 @@ const gameSchema = new mongoose.Schema({
     cardgame: {type: String, required: true},
     name: {type: String, required: true},
     set: {type: String, required: true},
-    rarity: {type: String, required: true},
+    rarity: {type: String, required: true}, 
+    value: {type:Number, required:true},
     img: String
   });
   

@@ -29,12 +29,12 @@ if(process.env.PORT){
 //              DATABASE
 // =======================================
 
-// const { db } = require('./models/gameSchema.js');
 
 
 // ===========================
 //           ROUTES
 // ===========================
+
 //new item route
 app.get('/game/new', (req, res) => {
     res.render('new.ejs')
@@ -45,6 +45,39 @@ app.post('/game', (req, res) => {
         res.redirect('/game')
     })
   });
+
+//new pokemon card route
+app.get('/game/newpokemon', (req, res) => {
+    res.render('newpokemon.ejs')
+});
+
+app.post('/game', (req, res) => {
+    game.create(req.body, (error, createdgame) => {
+        res.redirect('/game')
+    })
+  });
+
+//new magic card route
+app.get('/game/newmagic', (req, res) => {
+    res.render('newmagic.ejs')
+});
+
+app.post('/game', (req, res) => {
+    game.create(req.body, (error, createdgame) => {
+        res.redirect('/game')
+    })
+  });
+//new yugioh card route
+app.get('/game/newyugioh', (req, res) => {
+    res.render('newyugioh.ejs')
+});
+
+app.post('/game', (req, res) => {
+    game.create(req.body, (error, createdgame) => {
+        res.redirect('/game')
+    })
+  });  
+
 
 //update(replace whole data)
 app.put('/game/:id', (req, res)=>{
@@ -140,23 +173,7 @@ app.get('/game/:id', (req, res) => {
     })
 })
 
-//// Class express example(working when comment out all code on top)
-// const mongoose = require('mongoose');
-// const express = require('express');
-// const app = express();
 
-// let PORT = 3000;
-// if(process.env.PORT){
-// 	PORT = process.env.PORT
-// }
-
-// app.get('/', (req, res)=>{
-// 	res.send('hi');
-// })
-
-// app.listen(PORT, ()=>{
-// 	console.log('listening');
-// })
 // =======================================
 //              LISTENER
 // =======================================
@@ -166,13 +183,13 @@ app.listen(PORT, () => {
     console.log(`App listening on port: 3000`)
   });
 
-  mongoose.connect('mongodb://localhost:27017/game', () => {
-      console.log('The connection with mongod is established')
-  })  
+//   mongoose.connect('mongodb://localhost:27017/game', () => {
+//       console.log('The connection with mongod is established')
+//   })  
 
-// mongoose.connect(MONGODB_URI, ()=>{
-// 	console.log('connected to mongo');
-// })
+mongoose.connect(MONGODB_URI, ()=>{
+	console.log('connected to mongo');
+})
 
 
 

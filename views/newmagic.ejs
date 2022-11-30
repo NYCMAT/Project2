@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/magic.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">       
+         <title>New Magic</title>
+    </head>
+    <body>
+        <h1>Add a new Magic The Gathering Card</h1>
+        <form action="/game" method="POST">
+            Card Game: <input type="text" name="cardgame" value="Magic The Gathering"><br/>
+            Card Name: <input type="text" name="name" ><br/>
+            Set: <input type="text" name="set" ><br/>
+            Rarity: <input type="text" name="rarity"><br/>
+            Value: <input type="number" name="value"><br/>
+            Image URL: <input type="text" name="img" placeholder="Tcg.com for image"><br/>
+            <input class='btn btn-success' type="submit"  value="Submit Changes"/>
+        </form>
+    
+            <a class="btn btn-primary" href="/game/magic">Back to Magic page</a>
+    
+    </body>
+</html>

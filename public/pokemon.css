@@ -1,0 +1,310 @@
+@import url('https://fonts.cdnfonts.com/css/games');
+*{
+    padding: 0;
+    margin:0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+  
+  }
+
+body {
+    /* background-color: #010402; */
+    background-image: url("https://wallpaperaccess.com/full/4167709.gif");
+    background-size: auto;
+    color: white;
+    margin-top: 10%;
+}
+
+#head{    
+    color:white;
+    font-size: 150px;
+    letter-spacing: 1px;
+    cursor: pointer;   
+    margin: 20px 0px 20px;
+    display: inline-flex;
+  }
+  
+  #head .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  #head .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+    overflow: hidden; 
+    position: fixed;
+    top: 0;
+    width: 100%; 
+  }
+  span {
+    color: lightseagreen;
+  }
+  
+  nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding:  10px  25px;
+  
+  }
+  nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  nav ul li a:hover{
+    color: lightseagreen;
+    transition: .4s;
+  
+  }
+  
+  canvas {
+    width: 25%;
+    opacity: 50%;
+    display: block;
+    background-color: transparent;
+  }
+  
+  .btn{
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+  }
+  
+  .btn:hover{
+    transform: scale(1.2);
+  }
+  
+  .greeting{
+    position: absolute;
+    top: 150%;
+    left: 8%;
+    transform: translateY(-50%);
+  }
+  .footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    background-image:url(https://img.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-concrete_1258-70493.jpg?w=900&t=st=1669776375~exp=1669776975~hmac=942bb4b8bcc6a7aec2888322ffc77d55fb1480ff60eac063fbdecf6d7348d0cb) ;
+    background-size: cover;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .footer p:nth-child(1){
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .footer p:nth-child(2){
+    color: white;
+    font-size: 17px;
+    width: 500px;
+    text-align: center;
+    line-height: 26px;
+  }
+  
+  .social {
+    display: flex;
+  }
+  
+  .social a{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightseagreen;
+    border-radius: 50%;
+    margin: 22px 22px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  
+    
+  }
+  
+  .social a:hover{
+    background-color: transparent;
+    border: 2px solid lightseagreen;
+    cursor: pointer;
+    transform: scale(1.5);
+    transition: transform .5s;
+  }
+  
+  a {
+      color: whitesmoke;
+  }
+
+
+
+/* a:hover{
+    transform: scale(1.2);
+} */
+
+/* a:visited {
+    color: #d175b7;
+} */
+
+/* STOLEN FROM 
+https://codepen.io/maxym11/pen/vYLKNYO */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #ddd313;
+  --color-secondary: #1c2c54;
+  --color-tertiary: #1c09c5;
+  --color-quaternary: #ddd313;
+  --color-quinary: #1c09c5;
+}
+
+
+h1 {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  font-family: games, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: calc(2rem + 5vw);
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+
+
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+
+
+
+
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 30px 61px;
+    border-radius: 4px;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    margin: 25px;
+    font-family: "Roboto", sans-serif;
+    filter: hue-rotate(0deg);
+    border: 2px solid #d2bdff;
+    transition: all 0.1s linear;
+    content: "";
+}
+  
+.button:hover {
+      border: 1px solid transparent;
+      box-shadow:
+      inset 60px 0 120px #f0f,  /* left magenta */
+      inset -60px 0 120px #0ff; /* right cyan */
+}
+
+span {
+    color: #4bc3b5;
+}
+
+h2{
+    color: #d175b7;
+}
+
+form {
+    color: white;
+  }

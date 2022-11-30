@@ -1,24 +1,179 @@
 @import url('https://fonts.cdnfonts.com/css/games');
 
-body {
-    /* background-color: #010402; */
-    background-image: url("https://wallpaperaccess.com/full/4167709.gif");
-    background-size: stretch;
-    color: white;
-    margin-top: 10%;
+*{
+  padding: 0;
+  margin:0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  box-sizing: border-box;
+
 }
 
-body::after {
+body {
+  height: 100vh;
+  width: 100%;
+  background-image: url(https://img.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-concrete_1258-70493.jpg?w=900&t=st=1669776375~exp=1669776975~hmac=942bb4b8bcc6a7aec2888322ffc77d55fb1480ff60eac063fbdecf6d7348d0cb);
+  background-size: cover;
+  background-position: center;
+  
+  
+    /* background-image: url("https://i.ytimg.com/vi/a8jfAp7woJk/maxresdefault.jpg");
+    background-size: cover;
+    color: white;
+    margin-top: 10%; */
+}
 
+#head{    
+  color:white;
+  font-size: 150px;
+  letter-spacing: 1px;
+  cursor: pointer;   
+  margin: 20px 0px 20px;
+  display: inline-flex;
+}
+
+#head .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+#head .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 45px;
+  padding-left: 8%;
+  padding-right: 8%;
+  overflow: hidden; 
+  position: fixed;
+  top: 0;
+  width: 100%; 
+}
+span {
+  color: lightseagreen;
+}
+
+nav ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding:  10px  25px;
+
+}
+nav ul li a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+nav ul li a:hover{
+  color: lightseagreen;
+  transition: .4s;
+
+}
+
+canvas {
+  width: 25%;
+  opacity: 50%;
+  display: block;
+  background-color: transparent;
+}
+
+.btn{
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: transform .4s;
+}
+
+.btn:hover{
+  transform: scale(1.2);
+}
+
+.greeting{
+  position: fixed;
+  top: 60%;
+  left: 8%;
+  transform: translateY(-50%);
+  
+}
+.footer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background-image:url(https://img.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-concrete_1258-70493.jpg?w=900&t=st=1669776375~exp=1669776975~hmac=942bb4b8bcc6a7aec2888322ffc77d55fb1480ff60eac063fbdecf6d7348d0cb) ;
+  background-size: cover;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 150px;
+  overflow: auto;
+}
+
+.footer p:nth-child(1){
+  font-size: 30px;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footer p:nth-child(2){
+  color: white;
+  font-size: 17px;
+  width: 500px;
+  text-align: center;
+  line-height: 26px;
+}
+
+.social {
+  display: flex;
+}
+
+.social a{
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightseagreen;
+  border-radius: 50%;
+  margin: 22px 22px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+
+  
+}
+
+.social a:hover{
+  background-color: transparent;
+  border: 2px solid lightseagreen;
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: transform .5s;
 }
 
 a {
-    color: #4bc3b5;
+    color: whitesmoke;
 }
 
-a:visited {
+/* a:visited {
     color: #d175b7;
-}
+} */
 
 /* STOLEN FROM 
 https://codepen.io/maxym11/pen/vYLKNYO */
@@ -147,9 +302,29 @@ h1 {
 }
 
 span {
-    color: #4bc3b5;
+    color: red;
+    font-size: x-large;
+    font-weight: 200;
 }
 
 h2{
-    color: #d175b7;
+  color: lightseagreen;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.value {
+  color: goldenrod;
+  font-size: larger;
+}
+
+h4{
+  color:white;
+  font-size: 25px;
+  margin-bottom: 50px;
+
+}
+
+form {
+  color: white;
 }

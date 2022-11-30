@@ -8,23 +8,43 @@
 <title></title>
 </head>
 <body>
-    <header>
-       <h1>TCG Collection</h1>
-    </header>
-    <h2>Card Info</h2>
-    <p><span>Title: </span> <%=game.cardgame%></p><br/>
-    <p><span>Developer: </span> <%=game.name%></p><br/>
-    <p><span>System: </span><%=game.set%></p><br/>
-    <p><span>Release Date: </span> <%=game.rarity%></p><br/>
-    <img src=<%=game.img%> alt=""><br/>
-
-    <a href="/game/<%=game._id; %>/edit">Edit</a>
-
-    <form action="/game/<%=game._id; %>?_method=DELETE" method="POST">
-        <input type="submit" value="DELETE" href="/game" />
-    </form>
     <nav>
-        <a class="button" href="/game">Back to mainpage</a>
+        <h1 id="head" class="text-center">
+            <div class="text-wrapper">
+            </div>
+        </h1>
+        <ul>
+            <li><a href="/game/pokemon">Pokemon Collection</a></li>
+            <li><a href="/game/magic">Magic The Gathering Collection</a></li>
+            <li><a href="/game/yugioh">YuGiOh Collection</a></li>
+            <li><a href="/game/new">Add Card</a></li>
+
+        </ul>
     </nav>
+    <div class="greeting">
+        <p><span>Game: </span>
+            <%=game.cardgame%>
+        </p><br />
+        <p><span>Card Name: </span>
+            <%=game.name%>
+        </p><br />
+        <p><span>Set: </span>
+            <%=game.set%>
+        </p><br />
+        <p><span>Rarity: </span>
+            <%=game.rarity%>
+        </p><br />
+        <p><span>Value: $</span>
+            <%=game.value%>
+        </p><br />
+        <img src=<%=game.img%> alt=""><br />
+    
+        <a href="/game/<%=game._id; %>/edit">Edit</a>
+    
+        <form action="/game/<%=game._id; %>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE" href="/game" />
+        </form>
+        <a class="button" href="/game">Back to mainpage</a>
+    </div>
 </body>
 </html>

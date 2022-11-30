@@ -4,33 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/magic.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center">Magic The Gathering Collection</h1>
+    <div class="greeting">
+        <h1 class="text-center">Magic Collection</h1>
         <ul>
-            <h2>Magic Collection</h2>
+                <% let magicValue = 0; %>
                 <% for(let i=0; i < game.length; i++){ %>
                     
                         <% if (game[i].cardgame == "Magic" || game[i].cardgame == "magic"|| game[i].cardgame == "Magic The Gathering"|| game[i].cardgame == "MTG"){%>
                         <a href="/game/<%=game[i]._id; %>">
                             <%=game[i].name; %>
-                            <%=game[i].set; %><br />
+                            <%=game[i].set; %>
+                            $<%=game[i].value; %><br/>
+                            <img src="<%=game[i].img; %>"><br/>
                         </a>
+                        <% magicValue = game[i].value + magicValue; %>
                         <% } %>
                 
                     <% } %>
+                    <h2>Magic The Gathering Cards Total Value</h2>
+                    <p>$<%= magicValue %></p>
         </ul>
         
-        <nav>
-            <a class="btn btn-primary" href="/game/new">       
+            <a class="btn btn-primary" href="/game/newmagic">       
                 <div class="button">
-                    Add a new card to the collection
+                    Add a new Magic Card
                   </div></a>
                   <a class="button" href="/game">Back to mainpage</a>
-        </nav>
     </div>
+    <nav>
+        <h1 id="head" class="text-center">
+        </h1>
+        <ul>
+            <li><a href="/game/pokemon">Pokemon Collection</a></li>
+            <li><a href="/game/magic">Magic The Gathering Collection</a></li>
+            <li><a href="/game/yugioh">YuGiOh Collection</a></li>
+            <li><a href="/game/new">Add Card</a></li>
+
+        </ul>
+    </nav>
 </body>
 </html>

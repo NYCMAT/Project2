@@ -4,32 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/yugioh.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="greeting">
         <h1 class="text-center">YuGiOh Collection</h1>
         <ul>
-            <h2>YuGiOh Collection</h2>
+                <% let yugiohValue = 0; %>
                 <% for(let i=0; i < game.length; i++){ %>
                 
                         <% if (game[i].cardgame == "YuGiOh" || game[i].cardgame == "yugioh" || game[i].cardgame == "Yugioh"){%>
                         <a href="/game/<%=game[i]._id; %>">
-                            <%=game[i].name; %><br/>
+                            <%=game[i].name; %>
+                            <%=game[i].set; %>
+                            $<%=game[i].value; %><br/>
+                            <img src="<%=game[i].img; %>"><br/>
                         </a>
+                        <% yugiohValue = game[i].value + yugiohValue; %>
                         <% } %>
 
                     <% } %>
+                    <h2>YuGiOh Cards Total Value</h2>
+                    <p>$<%= yugiohValue %></p>
         </ul>
         
-        <nav>
-            <a class="btn btn-primary" href="/game/new">       
+            <a class="btn btn-primary" href="/game/newyugioh">       
                 <div class="button">
-                    Add a new card to the collection
+                    Add a new YuGiOh Card 
                   </div></a>
                   <a class="button" href="/game">Back to mainpage</a>
-        </nav>
+    
     </div>
+    <nav>
+        <h1 id="head" class="text-center">
+            <div class="text-center">
+            </div>
+        </h1>
+        <ul>
+            <li><a href="/game/pokemon">Pokemon Collection</a></li>
+            <li><a href="/game/magic">Magic The Gathering Collection</a></li>
+            <li><a href="/game/yugioh">YuGiOh Collection</a></li>
+            <li><a href="/game/new">Add Card</a></li>
+
+        </ul>
+    </nav>
 </body>
 </html>
